@@ -1,0 +1,34 @@
+<script language="JavaScript" type="text/javascript">
+
+        
+        function onButtonClick() {
+        
+       //var name = document.form1.NAME.value;
+       var name = document.getElementById( "name" ).value;
+       var age = document.getElementById( "age" ).value;
+       var add = document.getElementById( "add" ).value;
+       console.log(name)
+       var utf8strName = unescape(encodeURIComponent(name));
+       var utf8strAge = unescape(encodeURIComponent(age));
+       var utf8strAdd = unescape(encodeURIComponent(add));
+       var utf16strName = decodeURIComponent(escape(utf8strName));
+       var utf16strAge = decodeURIComponent(escape(utf8strAge));
+       var utf16strAdd = decodeURIComponent(escape(utf8strAdd));
+       document.form1.action = 'mailto:foo@xxx.dom?subject=TESTMAIL&body=' + utf16strName +','+ utf16strAge +','+ utf16strAdd;
+      
+       document.form1.submit();
+         alert(utf16str);
+         
+       }
+  </script>
+
+<form method="post" enctype="text/plain" name="form1">
+
+<div>氏名：<input type="text" id="name"></div>
+<div>年齢：<input type="text" id="age"></div>
+<div>住所：<input type="text" id="add"></div>
+<div><input type="button" value="送信" onclick="onButtonClick();"></div>
+</form>
+
+
+  

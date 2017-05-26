@@ -1,0 +1,7 @@
+①　アラートを出す
+②　フォームのデータをとる
+③　フームのデータを使って文章組み合わせ
+④　組み合わせたデータをURLエンコードに変える（文字化けするため）http://logic.moo.jp/data/archives/438.html
+⑤　mailto:dammy@dammy.com?subjectと④の文字列を組み合わせる（dammy@dammyは任意のメールアドレス）
+⑥　フォームのアクションに組み込む
+

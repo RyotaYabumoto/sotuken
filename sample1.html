@@ -1,0 +1,28 @@
+<html> 
+2	 
+3	<head> 
+4	<title>form.action - formタグのaction値を取得/設定</title> 
+5	</head> 
+6	 
+7	<body> 
+8	 
+9	<!--formタグのaction値を取得/設定のサンプル--> 
+10	<form method="post" action="index.php" id="frm"> 
+11	<input type="text" name="testname" value="aaa"> 
+12	<select name="day" id="day"> 
+13	<option value="1">1の値 
+14	<option value="2">2の値 
+15	<option value="3">3の値 
+16	<option value="4">4の値 
+17	<option value="5">5の値 
+18	</select> 
+19	<input type="submit" value="submit"> 
+20	</form> 
+21	 
+22	<script type="text/javascript"> 
+23	var element = document.getElementById("frm"); 
+24	document.write("FORMのactionの値は→"+element.action); 
+25	</script> 
+26	 
+27	</body> 
+28	</html> 
